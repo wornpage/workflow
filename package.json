@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "description": "Pack state machine — blocker/next/doneWhen triad, filtering, ordering",
   "type": "module",
-  "scripts": { "test": "bun test" },
+  "scripts": {
+    "test": "bun test",
+    "build": "bun build src/index.ts --outfile dist/worn-workflow.js --target browser"
+  },
   "main": "./dist/worn-workflow.js",
   "svelte": "./src/index.ts",
   "exports": {
@@ -13,8 +16,16 @@
       "default": "./dist/worn-workflow.js"
     }
   },
-  "files": ["dist", "src"],
-  "peerDependencies": { "svelte": "^5.0.0" },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  },
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/wornpage/workflow.git" }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wornpage/workflow.git"
+  }
 }
