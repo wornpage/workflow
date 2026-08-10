@@ -6,6 +6,14 @@ no Svelte required.
 
 21 tests.
 
+<!-- wornpage-delivery:v1 source -->
+## Delivery
+
+`src/` is the canonical implementation and published runtime. This package is source-only; it does not ship a generated `dist/` directory.
+
+The shared [component delivery contract](https://github.com/wornpage/cli/blob/master/docs/component-delivery.md) checks this declaration, package exports, packed files, and generated output on every push and pull request.
+<!-- /wornpage-delivery -->
+
 ## Install
 
 ```bash
@@ -62,16 +70,6 @@ primaryCommand(pack);          // { label, action, shortcut }
 | `NEXT_ACTIONS` | `Open`, `Start`, `Block`, `Done`, `Review`, `Focus` |
 
 Types `Pack` and `Receipt` are exported.
-
-## Building
-
-This package ships TypeScript source. Consumers resolving the `svelte`
-export condition (Vite, SvelteKit) read `src/` directly. For plain node or bun
-resolution, build the bundle first:
-
-```bash
-bun run build
-```
 
 ## Tests
 
